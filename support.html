@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--
+  DEPLOYMENT NOTE (remove or ignore for end users):
+  Host this file at the same public HTTPS location as privacy.html (e.g.
+  https://<your-domain>/support.html). App Store Connect's App Information
+  page has a mandatory "Support URL" field — enter this file's public URL
+  there. Fully self-contained: no external CSS, fonts, scripts, or network calls.
+-->
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Otomo — Destek / Support</title>
+<meta name="description" content="Otomo uygulaması destek sayfası (TR) / Otomo app support page (EN).">
+<style>
+  :root {
+    --bg: #F7F8FA;
+    --surface: #FFFFFF;
+    --text: #10182B;
+    --text-muted: #4B5566;
+    --border: #E3E7EE;
+    --accent: #0E8F80;
+    --accent-strong: #0B1F3A;
+    --callout-bg: #EAF7F5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0A1220;
+      --surface: #0F1B30;
+      --text: #EDF1F7;
+      --text-muted: #A7B1C2;
+      --border: #1E2C46;
+      --accent: #2DD4C4;
+      --accent-strong: #7FE3D6;
+      --callout-bg: #10281F;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  header.page-head {
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .brand .name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-strong);
+    letter-spacing: -0.01em;
+  }
+  .brand .tagline {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+  .meta {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  nav.lang-switch {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+  nav.lang-switch a {
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+    text-decoration: none;
+    background: var(--surface);
+  }
+  nav.lang-switch a:hover,
+  nav.lang-switch a:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  section.policy { margin-top: 1rem; }
+  section.policy + section.policy {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--border);
+  }
+  h1 {
+    font-size: 1.3rem;
+    margin: 0 0 1.25rem;
+    color: var(--accent-strong);
+  }
+  h2 {
+    font-size: 1.05rem;
+    margin: 2rem 0 0.6rem;
+    color: var(--accent-strong);
+  }
+  p { margin: 0.6rem 0; color: var(--text); }
+  .faq-q {
+    font-weight: 600;
+    margin: 1.5rem 0 0.3rem;
+    color: var(--text);
+  }
+  .muted { color: var(--text-muted); }
+  .callout {
+    background: var(--callout-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+  }
+  .callout strong { color: var(--accent-strong); }
+  a { color: var(--accent); }
+  footer.page-foot {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  footer.page-foot a { color: var(--accent); }
+  .top-link { font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-head">
+    <div class="brand">
+      <span class="name">Otomo</span>
+      <span class="tagline">Arabanın dilinden anlar.</span>
+    </div>
+    <div class="meta">Destek · Support</div>
+    <nav class="lang-switch" aria-label="Dil seçimi / Language">
+      <a href="#tr">Türkçe</a>
+      <a href="#en">English</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================= TÜRKÇE ============================= -->
+    <section class="policy" id="tr" lang="tr">
+      <h1>Otomo Destek</h1>
+      <p class="muted">Bir sorun mu yaşıyorsun, yoksa aklına bir soru mu takıldı? Aşağıda en sık sorulan sorular var; cevabını bulamazsan doğrudan bize yaz.</p>
+
+      <div class="callout">
+        E-posta ile destek: <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a> — genellikle 1-2 iş günü içinde yanıtlıyoruz.
+      </div>
+
+      <h2>Sıkça Sorulan Sorular</h2>
+
+      <p class="faq-q">Usta nasıl çalışır? Çevrimdışı neler çalışır?</p>
+      <p>Usta, Otomo'nun isteğe bağlı yapay zekâ destekli sohbet özelliğidir (metin veya fotoğrafla soru sorabilirsin) ve çalışması için internet bağlantısı gerekir. Ücretsiz kullanımda günde 5 mesaj hakkın var. Uygulamanın geri kalanı — OBD-II arıza kodu sözlüğü, gösterge uyarı ışıkları rehberi, adım adım teşhis sihirbazı ve bakım/garaj defteri — tamamen çevrimdışı çalışır ve hesap gerektirmez; internetin olmadığı yerde de yanında.</p>
+
+      <p class="faq-q">Fotoğraf hakkım ne kadar?</p>
+      <p>Ücretsiz kullanımda ayda 3 fotoğraf gönderebilirsin (ör. gösterge paneli veya bir sızıntının fotoğrafı). Otomo Pro'da fotoğraf sınırı kalkar (adil kullanım kuralları geçerlidir). Gönderdiğin fotoğraflar yalnızca o anki yanıtı üretmek için işlenir, saklanmaz — ayrıntı için Gizlilik Politikası'na bakabilirsin.</p>
+
+      <p class="faq-q">Otomo Pro aboneliğimi nasıl iptal ederim?</p>
+      <p>Otomo Pro, App Store üzerinden yönetilen otomatik yenilenen bir abonelik olduğu için iptal işlemi de Apple hesabından yapılır: <strong>Ayarlar → [Adın] → Abonelikler → Otomo Pro → Aboneliği İptal Et</strong>. Uygulama bu işlemi kendisi gerçekleştiremez. Önceden yaptığın bir satın alımı geri yüklemek istersen uygulama içindeki "Satın Alımları Geri Yükle" seçeneğini kullanabilirsin.</p>
+
+      <p class="faq-q">Verilerimi nasıl silerim?</p>
+      <p>İki yolu var: (1) Uygulama içinde <strong>Ayarlar → "Verileri sıfırla"</strong> — araçların, bakım geçmişin ve tercihlerin cihazından kalıcı olarak silinir. (2) Otomo'yu cihazından kaldırmak (uninstall) da aynı şekilde tüm yerel verileri siler. Otomo'da hesap olmadığı için silinecek başka bir sunucu kaydı yoktur.</p>
+
+      <p>Verilerin nasıl işlendiği hakkında daha fazla bilgi için: <a href="privacy.html">Gizlilik Politikası</a>.</p>
+
+      <p class="top-link"><a href="#en">↓ English version</a></p>
+    </section>
+
+    <!-- ============================= ENGLISH ============================= -->
+    <section class="policy" id="en" lang="en">
+      <h1>Otomo Support</h1>
+      <p class="muted">Running into a problem, or just have a question? Check the FAQ below — if you don't find your answer, write to us directly.</p>
+
+      <div class="callout">
+        Email support: <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a> — we typically reply within 1-2 business days.
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <p class="faq-q">How does Mechanic work? What works offline?</p>
+      <p>Mechanic is Otomo's optional AI-powered chat feature (you can ask questions by text or photo), and it requires an internet connection. The free tier includes 5 messages per day. Everything else in the app — the OBD-II trouble-code dictionary, the dashboard warning-light guide, the step-by-step troubleshooting wizard, and the maintenance/garage log — works fully offline and needs no account, so it's with you even where there's no signal.</p>
+
+      <p class="faq-q">How many photos can I send?</p>
+      <p>The free tier includes 3 photos per month (e.g. a dashboard photo or a leak). Otomo Pro removes the photo limit (fair-use rules apply). Photos you send are processed only to generate that reply and are not stored — see the Privacy Policy for details.</p>
+
+      <p class="faq-q">How do I cancel my Otomo Pro subscription?</p>
+      <p>Otomo Pro is an auto-renewable subscription managed through the App Store, so cancellation is handled from your Apple account: <strong>Settings → [Your Name] → Subscriptions → Otomo Pro → Cancel Subscription</strong>. The app itself cannot perform this action. If you need to restore a previous purchase, use the "Restore Purchases" option inside the app.</p>
+
+      <p class="faq-q">How do I delete my data?</p>
+      <p>Two ways: (1) In the app, go to <strong>Settings → "Verileri sıfırla" (Reset Data)</strong> — this permanently deletes your vehicles, maintenance history, and preferences from your device. (2) Uninstalling Otomo also deletes all local data the same way. Since Otomo has no account system, there is no separate server-side record to delete.</p>
+
+      <p>For more on how your data is handled, see the <a href="privacy.html">Privacy Policy</a>.</p>
+
+      <p class="top-link"><a href="#tr">↑ Türkçe sürüm</a></p>
+    </section>
+
+  </main>
+
+  <footer class="page-foot">
+    <p>Otomo · <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a> · <a href="privacy.html">Gizlilik Politikası / Privacy Policy</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--
+  DEPLOYMENT NOTE (remove or ignore for end users):
+  This file must be hosted at a stable, public HTTPS URL before Otomo can be
+  submitted to the App Store — App Store Connect's "App Privacy" section
+  requires a live Privacy Policy URL. Deploy this exact file (it is fully
+  self-contained: no external CSS, fonts, scripts, or network calls) at e.g.
+  https://otomo.app/privacy.html or https://<your-domain>/privacy.html and
+  enter that URL in App Store Connect. Keep it in sync with src/services/
+  aiMechanic.ts and src/lib/storage.ts if their data-handling behavior changes.
+-->
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Otomo — Gizlilik Politikası / Privacy Policy</title>
+<meta name="description" content="Otomo uygulaması gizlilik politikası (TR) / Otomo app privacy policy (EN).">
+<style>
+  :root {
+    --bg: #F7F8FA;
+    --surface: #FFFFFF;
+    --text: #10182B;
+    --text-muted: #4B5566;
+    --border: #E3E7EE;
+    --accent: #0E8F80;
+    --accent-strong: #0B1F3A;
+    --callout-bg: #EAF7F5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0A1220;
+      --surface: #0F1B30;
+      --text: #EDF1F7;
+      --text-muted: #A7B1C2;
+      --border: #1E2C46;
+      --accent: #2DD4C4;
+      --accent-strong: #7FE3D6;
+      --callout-bg: #10281F;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  header.page-head {
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .brand .name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-strong);
+    letter-spacing: -0.01em;
+  }
+  .brand .tagline {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+  .meta {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  nav.lang-switch {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+  nav.lang-switch a {
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+    text-decoration: none;
+    background: var(--surface);
+  }
+  nav.lang-switch a:hover,
+  nav.lang-switch a:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  section.policy { margin-top: 1rem; }
+  section.policy + section.policy {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--border);
+  }
+  h1 {
+    font-size: 1.3rem;
+    margin: 0 0 1.25rem;
+    color: var(--accent-strong);
+  }
+  h2 {
+    font-size: 1.05rem;
+    margin: 2rem 0 0.6rem;
+    color: var(--accent-strong);
+  }
+  h2 .num { color: var(--accent); margin-right: 0.35rem; }
+  p { margin: 0.6rem 0; color: var(--text); }
+  ul { margin: 0.6rem 0; padding-left: 1.3rem; }
+  li { margin: 0.35rem 0; }
+  .muted { color: var(--text-muted); }
+  .callout {
+    background: var(--callout-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+  .callout strong { color: var(--accent-strong); }
+  a { color: var(--accent); }
+  code {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.1rem 0.35rem;
+    font-size: 0.9em;
+  }
+  footer.page-foot {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  footer.page-foot a { color: var(--accent); }
+  .top-link { font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-head">
+    <div class="brand">
+      <span class="name">Otomo</span>
+      <span class="tagline">Arabanın dilinden anlar.</span>
+    </div>
+    <div class="meta">Gizlilik Politikası · Privacy Policy — Yürürlük tarihi / Effective date: 17 Temmuz 2026 · July 17, 2026</div>
+    <nav class="lang-switch" aria-label="Dil seçimi / Language">
+      <a href="#tr">Türkçe</a>
+      <a href="#en">English</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================= TÜRKÇE ============================= -->
+    <section class="policy" id="tr" lang="tr">
+      <h1>Otomo Gizlilik Politikası</h1>
+      <p class="muted">Bu belge, Otomo mobil uygulamasının (“Otomo”, “uygulama”, “biz”) verilerinizi nasıl işlediğini açık ve sade bir dille anlatır. Uygulamayı kullanarak bu politikayı kabul etmiş olursunuz.</p>
+
+      <h2><span class="num">1.</span>Giriş</h2>
+      <p>Otomo; gösterge ışığı rehberi, OBD-II arıza kodu sözlüğü, belirti tabanlı teşhis sihirbazı, bakım/garaj defteri ve isteğe bağlı bir yapay zekâ “Usta” sohbeti sunan bir araç arıza asistanı uygulamasıdır. Uygulamanın neredeyse tamamı tamamen çevrimdışı çalışır; tek çevrimiçi özellik yapay zekâ sohbetidir (bkz. §6).</p>
+
+      <h2><span class="num">2.</span>Hesap veya Üyelik Yok</h2>
+      <p>Otomo'da kayıt olma, giriş yapma veya profil oluşturma zorunluluğu yoktur ve bu özellikler uygulamada bulunmaz. Ad, e-posta, telefon numarası veya şifre gibi bir kimlik bilgisi istemeyiz ve toplamayız.</p>
+
+      <h2><span class="num">3.</span>Analitik, Reklam ve Takip Kullanılmaz</h2>
+      <p>Uygulamada hiçbir analitik, reklam veya izleme SDK'sı (ör. Firebase, Google Analytics, Mixpanel, reklam ağları) bulunmaz. Reklam kimliğiniz (IDFA) veya davranışsal profiliniz oluşturulmaz, cihazlar arası veya uygulamalar arası takip yapılmaz. Bu, iOS Gizlilik Bildirimi'nde (<code>PrivacyInfo.xcprivacy</code>) <code>NSPrivacyTracking: false</code> olarak ve boş bir toplanan-veri listesiyle beyan edilmiştir.</p>
+
+      <h2><span class="num">4.</span>Cihazınızda Yerel Olarak Sakladığımız Veriler</h2>
+      <p>Aşağıdaki veriler <strong>yalnızca kendi cihazınızda</strong>, Capacitor'ın yerel depolama katmanı (<code>@capacitor/preferences</code> — iOS/Android'de işletim sisteminin güvenli tercih deposu) üzerinden saklanır:</p>
+      <ul>
+        <li>Garaj profilleriniz (araç marka/model/yıl, kilometre gibi sizin girdiğiniz bilgiler)</li>
+        <li>Bakım ve servis geçmişi kayıtlarınız, masraf notlarınız</li>
+        <li>Uygulama tercihleri (ör. açık/koyu tema) ve günlük Usta sohbeti kullanım sayacı</li>
+      </ul>
+      <div class="callout">
+        Bu veriler herhangi bir sunucuya gönderilmez, bulutla senkronize edilmez, yedeklenmez ve bizimle ya da üçüncü bir tarafla paylaşılmaz. Hiçbir hesap sistemi olmadığı için bu verilere geliştirici olarak bizim de erişimimiz yoktur — veriler yalnızca sizin cihazınızda yaşar.
+      </div>
+
+      <h2><span class="num">5.</span>Yapay Zekâ “Usta” Sohbeti Nasıl Çalışır</h2>
+      <p>Usta, uygulamanın <strong>tek çevrimiçi özelliğidir</strong>. Sohbete bir mesaj yazıp gönderdiğinizde:</p>
+      <ul>
+        <li>Yalnızca yazdığınız metin ve/veya sohbete eklemeyi seçtiğiniz isteğe bağlı fotoğraf (ör. gösterge paneli ya da bir sızıntı görüntüsü) — varsa üzerinde konuştuğunuz arıza kodu/araç bağlamıyla birlikte — yanıt üretmek amacıyla, uygulamanın kendi arka uç <em>proxy</em> sunucusu üzerinden bir yapay zekâ işleme hizmetine iletilir. Bu hizmet <strong>Google Gemini'dir (Google LLC)</strong>. Gerçek yapay zekâ sağlayıcı anahtarları hiçbir zaman uygulama içinde bulunmaz; yalnızca bu proxy'de saklanır.</li>
+        <li>Fotoğraf eklemek tamamen isteğe bağlıdır: kamera veya galeri erişimi yalnızca siz sohbette "Fotoğraf ekle" düğmesine bastığınız anda, yalnızca o fotoğrafı seçmeniz/çekmeniz için istenir — arka planda ya da başka hiçbir ekranda kameranıza veya galerinize erişilmez. Fotoğraf, gönderilmeden önce cihazınızda küçültülür.</li>
+        <li>Uygulamada hesap olmadığından mesajınıza veya fotoğrafınıza adınız, e-postanız ya da kalıcı bir cihaz/kullanıcı kimliği eklenmez — kimliğinizle ilişkilendirilmez. (İnternet üzerinden yapılan her istekte olduğu gibi, isteği işleyen sunucu IP adresiniz gibi standart bağlantı bilgilerini teknik olarak görebilir; bu, uygulamanın ayrıca topladığı veya sakladığı bir veri değildir.)</li>
+        <li>Mesajınız ve varsa fotoğrafınız yalnızca o anki yanıtı üretmek için <strong>geçici olarak</strong> işlenir; sunucu tarafında kalıcı olarak kaydedilmez, diske yazılmaz veya günlüklenmez ve yapay zekâ modellerini eğitmek için kullanılmaz.</li>
+        <li>Sohbet ekranındaki mesaj/fotoğraf geçmişi, yalnızca o oturumda görüntülemek için uygulamanın geçici çalışma belleğinde tutulur; cihazınızda kalıcı olarak saklanmaz ve uygulamadan çıkıldığında kaybolur.</li>
+        <li>İnternet bağlantınız yoksa veya bu özellik yapılandırılmamışsa uygulama herhangi bir mesaj ya da fotoğraf göndermez; bunun yerine sizi çevrimdışı araçlara (kod sözlüğü, teşhis sihirbazı, uyarı ışıkları rehberi) yönlendiren güvenli bir mesaj gösterir.</li>
+      </ul>
+      <p class="muted">Usta'nın verdiği yanıtlar bilgilendirme amaçlıdır; yetkili bir servis muayenesinin yerini tutmaz.</p>
+
+      <h2><span class="num">6.</span>Toplamadığımız Veriler</h2>
+      <p>Otomo; konumunuzu, rehber/kişilerinizi, sağlık verilerinizi ya da ödeme/finansal bilgilerinizi <strong>talep etmez ve toplamaz</strong>. Kamera ve fotoğraf galerisi erişimi yalnızca yukarıda (§5) açıklanan isteğe bağlı "Usta'ya fotoğraf ekle" özelliği için, yalnızca siz kullanmayı seçtiğinizde istenir; başka hiçbir ekranda veya amaçla kullanılmaz, arka planda çalışmaz.</p>
+
+      <h2><span class="num">7.</span>Üçüncü Taraflarla Paylaşım</h2>
+      <p>Verilerinizi satmayız ve reklam ağları veya veri komisyoncularıyla paylaşmayız. Tek istisna, §5'te açıklanan şekilde, yalnızca bir yanıt üretebilmesi için sohbet mesajınızın yapay zekâ işleme hizmetine iletilmesidir.</p>
+
+      <h2><span class="num">8.</span>Veri Güvenliği</h2>
+      <p>Cihazınızdaki yerel veriler, işletim sisteminizin (iOS/Android) sağladığı standart güvenli depolama mekanizmalarıyla korunur. Usta sohbeti için yapılan ağ istekleri HTTPS ile şifrelenir.</p>
+
+      <h2><span class="num">9.</span>Verilerinizi Nasıl Silersiniz</h2>
+      <p>İki yolunuz var:</p>
+      <ul>
+        <li><strong>Uygulama içinden:</strong> Ayarlar → <strong>“Verileri sıfırla”</strong> — tüm araçlarınız, bakım geçmişiniz ve tercihleriniz cihazınızdan kalıcı ve geri alınamaz şekilde silinir.</li>
+        <li><strong>Uygulamayı kaldırarak:</strong> Otomo'yu cihazınızdan kaldırmak (uninstall), depoladığı tüm yerel verileri de birlikte siler.</li>
+      </ul>
+
+      <h2><span class="num">10.</span>Çocukların Gizliliği</h2>
+      <p>Otomo çocuklara yönelik bir uygulama değildir ve bilerek çocuklardan veri toplamaz. Uygulamada zaten hesap veya kimlik bilgisi toplama mekanizması bulunmadığından, herhangi bir kullanıcıdan (yaşı fark etmeksizin) kişisel kimlik verisi biriktirilmez.</p>
+
+      <h2><span class="num">11.</span>Bu Politikadaki Değişiklikler</h2>
+      <p>Uygulamanın veri işleme şekli değişirse bu sayfa güncellenir ve yürürlük tarihi buna göre yenilenir. Önemli değişikliklerde uygulama içinde makul bir bildirim sunmaya çalışırız.</p>
+
+      <h2><span class="num">12.</span>İletişim</h2>
+      <p>Sorularınız, talepleriniz veya geri bildiriminiz için: <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a></p>
+
+      <h2><span class="num">13.</span>KVKK Kapsamında Aydınlatma Metni</h2>
+      <p class="muted">Bu bölüm, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca Türkiye'deki kullanıcılarımız için ek aydınlatma amacıyla hazırlanmıştır.</p>
+      <ul>
+        <li><strong>Veri sorumlusu:</strong> Otomo uygulamasının geliştiricisi. İletişim: <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a>.</li>
+        <li><strong>İşlenen veri kategorileri:</strong> (a) Cihazınızda kalan uygulama verisi — araç/garaj profilleri, bakım geçmişi, tercihler (§4) — bize hiç ulaşmaz, yalnızca cihazınızda tutulur; (b) Usta sohbetine yazdığınız metin ve isteğe bağlı olarak eklediğiniz fotoğraf (§5) — kimliğinizle ilişkilendirilmeden, yalnızca o anki yanıtı üretmek amacıyla geçici olarak işlenir.</li>
+        <li><strong>Yurt dışına aktarım:</strong> Usta sohbetiniz (metin ve varsa fotoğraf), yanıt üretmesi için yapay zekâ işleme hizmetimiz olan <strong>Google Gemini'ye (Google LLC, ABD merkezli)</strong> iletilir; bu veri kategorisi yalnızca bu amaçla ve yalnızca o anlık işlem sırasında yurt dışına aktarılmış olur. Cihazınızda kalan diğer veriler (§4) hiçbir şekilde yurt dışına ya da başka bir yere aktarılmaz.</li>
+        <li><strong>KVKK madde 11 hakları:</strong> KVKK m.11 uyarınca kişisel verinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını öğrenme, yurt içinde/dışında aktarıldığı üçüncü kişileri bilme, eksik/yanlış işlenmişse düzeltilmesini isteme, mevzuatın öngördüğü şartlarda silinmesini/yok edilmesini isteme ve otomatik sistemlerle analiz sonucu aleyhinize bir sonuç çıkmasına itiraz etme haklarına sahipsiniz.</li>
+        <li><strong>Başvuru yolu:</strong> Bu haklarınızı kullanmak için <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a> adresine yazılı olarak başvurabilirsiniz; talebiniz makul bir süre içinde yanıtlanır. Ayrıca cihazınızdaki veriler için Ayarlar → "Verileri sıfırla" (§9) ile herhangi bir başvuruya gerek kalmadan anında ve doğrudan kontrol sizdedir.</li>
+      </ul>
+
+      <p class="top-link"><a href="#en">↓ English version</a></p>
+    </section>
+
+    <!-- ============================= ENGLISH ============================= -->
+    <section class="policy" id="en" lang="en">
+      <h1>Otomo Privacy Policy</h1>
+      <p class="muted">This document explains, in plain language, how the Otomo mobile app (“Otomo”, “the app”, “we”) handles your data. By using the app, you agree to this policy.</p>
+
+      <h2><span class="num">1.</span>Introduction</h2>
+      <p>Otomo is a car-diagnostics assistant offering a dashboard warning-light guide, an OBD-II trouble-code lookup, a symptom-based troubleshooting wizard, a maintenance/garage log, and an optional AI “Mechanic” chat. Nearly the entire app works fully offline; the AI chat is the app's only online feature (see §6).</p>
+
+      <h2><span class="num">2.</span>No Account or Sign-In</h2>
+      <p>Otomo does not require — and does not offer — registration, sign-in, or profile creation. We do not ask for or collect identifying information such as your name, email address, phone number, or a password.</p>
+
+      <h2><span class="num">3.</span>No Analytics, Advertising, or Tracking</h2>
+      <p>The app contains no analytics, advertising, or tracking SDKs (e.g. Firebase, Google Analytics, Mixpanel, ad networks). We do not build an advertising identifier (IDFA) or behavioral profile, and we do not track you across apps or devices. This is declared in the iOS Privacy Manifest (<code>PrivacyInfo.xcprivacy</code>) as <code>NSPrivacyTracking: false</code> with an empty collected-data-types list.</p>
+
+      <h2><span class="num">4.</span>Data Stored Locally On Your Device</h2>
+      <p>The following data is stored <strong>only on your own device</strong>, via Capacitor's local storage layer (<code>@capacitor/preferences</code> — the operating system's secure preferences store on iOS/Android):</p>
+      <ul>
+        <li>Your garage profiles (vehicle make/model/year, mileage, and similar details you enter)</li>
+        <li>Your maintenance and service history entries, cost notes</li>
+        <li>App preferences (e.g. light/dark theme) and the daily Mechanic-chat usage counter</li>
+      </ul>
+      <div class="callout">
+        This data is never sent to a server, synced to a cloud, backed up remotely, or shared with us or any third party. Because there is no account system, we as the developer have no access to this data either — it lives solely on your device.
+      </div>
+
+      <h2><span class="num">5.</span>How the AI “Mechanic” Chat Works</h2>
+      <p>Mechanic is the app's <strong>only online feature</strong>. When you type and send a chat message:</p>
+      <ul>
+        <li>Only the text you wrote and/or the optional photo you choose to attach (e.g. a dashboard photo or a leak) — together with any trouble code or vehicle context you referenced — is sent, solely to generate a reply, through the app's own backend proxy to an AI processing service. That service is <strong>Google Gemini (Google LLC)</strong>. Real AI-provider API keys never live in the app itself; they are kept only on that proxy.</li>
+        <li>Attaching a photo is entirely optional: camera or photo-library access is requested only at the moment you tap "Attach photo" in the chat, only so you can pick or take that one photo — your camera or gallery is never accessed in the background or anywhere else. The photo is downsized on your device before it is sent.</li>
+        <li>Since the app has no account, your message or photo is not tagged with your name, email, or a persistent device/user identifier — it is not linked to your identity. (As with any request made over the internet, the server processing it can technically see standard connection details such as your IP address; this is not data the app itself additionally collects or stores.)</li>
+        <li>Your message and any photo are processed only <strong>transiently</strong>, to produce that one reply; we do not permanently store them, write them to disk, or log them on our side, and they are not used to train AI models.</li>
+        <li>The message/photo history shown on the chat screen is kept only in the app's temporary in-memory session state for display purposes; it is not persisted on your device and disappears when you leave the app.</li>
+        <li>If you have no internet connection, or this feature isn't configured, the app sends nothing — instead it shows a safe message pointing you to the offline tools (code lookup, troubleshooting wizard, warning-light guide).</li>
+      </ul>
+      <p class="muted">Mechanic's answers are informational; they do not replace an inspection by a qualified mechanic.</p>
+
+      <h2><span class="num">6.</span>Data We Do Not Collect</h2>
+      <p>Otomo does <strong>not</strong> request or collect your location, contacts, health data, or payment/financial information. Camera and photo-library access is requested only for the optional "attach a photo to Mechanic" feature described above (§5), only when you choose to use it; it is not used anywhere else and never runs in the background.</p>
+
+      <h2><span class="num">7.</span>Third-Party Sharing</h2>
+      <p>We do not sell your data and do not share it with ad networks or data brokers. The sole exception is described in §5: your chat message is relayed to an AI processing service solely so it can generate a reply.</p>
+
+      <h2><span class="num">8.</span>Data Security</h2>
+      <p>Local data on your device is protected by your operating system's (iOS/Android) standard secure storage mechanisms. Network requests made for the Mechanic chat are encrypted over HTTPS.</p>
+
+      <h2><span class="num">9.</span>Deleting Your Data</h2>
+      <p>You have two options:</p>
+      <ul>
+        <li><strong>In the app:</strong> Settings → <strong>“Verileri sıfırla” (Reset Data)</strong> — permanently and irreversibly deletes all your vehicles, maintenance history, and preferences from your device.</li>
+        <li><strong>By uninstalling:</strong> Removing Otomo from your device deletes all the local data it stored along with it.</li>
+      </ul>
+
+      <h2><span class="num">10.</span>Children's Privacy</h2>
+      <p>Otomo is not directed at children and does not knowingly collect data from children. Since the app has no account or identity-collection mechanism to begin with, it does not accumulate personal identifying data from any user, regardless of age.</p>
+
+      <h2><span class="num">11.</span>Changes to This Policy</h2>
+      <p>If how the app handles data changes, this page will be updated and its effective date revised. For material changes, we will try to provide reasonable notice within the app.</p>
+
+      <h2><span class="num">12.</span>Contact</h2>
+      <p>For questions, requests, or feedback: <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a></p>
+
+      <p class="top-link"><a href="#tr">↑ Türkçe sürüm</a></p>
+    </section>
+
+  </main>
+
+  <footer class="page-foot">
+    <p>Otomo · <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a> · Yürürlük / Effective: 17 Temmuz 2026 / July 17, 2026</p>
+  </footer>
+
+</div>
+</body>
+</html>
