@@ -158,7 +158,7 @@
       <span class="name">Otomo</span>
       <span class="tagline">Arabanın dilinden anlar.</span>
     </div>
-    <div class="meta">Gizlilik Politikası · Privacy Policy — Yürürlük tarihi / Effective date: 16 Eylül 2026 · September 16, 2026</div>
+    <div class="meta">Gizlilik Politikası · Privacy Policy — Yürürlük tarihi / Effective date: 19 Eylül 2026 · September 19, 2026</div>
     <nav class="lang-switch" aria-label="Dil seçimi / Language">
       <a href="#tr">Türkçe</a>
       <a href="#en">English</a>
@@ -173,33 +173,35 @@
       <p class="muted">Bu belge, Otomo mobil uygulamasının (“Otomo”, “uygulama”, “biz”) verilerinizi nasıl işlediğini açık ve sade bir dille anlatır. Uygulamayı kullanarak bu politikayı kabul etmiş olursunuz.</p>
 
       <h2><span class="num">1.</span>Giriş</h2>
-      <p>Otomo; gösterge ışığı rehberi, OBD-II arıza kodu sözlüğü, belirti tabanlı teşhis sihirbazı, bakım/garaj defteri ve isteğe bağlı bir yapay zekâ “Usta” sohbeti sunan bir araç arıza asistanı uygulamasıdır. Uygulamanın neredeyse tamamı tamamen çevrimdışı çalışır; tek çevrimiçi özellik yapay zekâ sohbetidir (bkz. §6).</p>
+      <p>Otomo; gösterge ışığı rehberi, OBD-II arıza kodu sözlüğü, belirti tabanlı teşhis sihirbazı, bakım/garaj defteri ve isteğe bağlı bir yapay zekâ “Usta” sohbeti sunan bir araç arıza asistanı uygulamasıdır. Uygulamanın neredeyse tamamı tamamen çevrimdışı çalışır; çevrimiçi olan yalnızca yapay zekâ sohbeti ile Pro abonelik doğrulamasıdır (bkz. §5 ve §7).</p>
 
       <h2><span class="num">2.</span>Hesap veya Üyelik Yok</h2>
       <p>Otomo'da kayıt olma, giriş yapma veya profil oluşturma zorunluluğu yoktur ve bu özellikler uygulamada bulunmaz. Ad, e-posta, telefon numarası veya şifre gibi bir kimlik bilgisi istemeyiz ve toplamayız.</p>
 
       <h2><span class="num">3.</span>Analitik, Reklam ve Takip Kullanılmaz</h2>
-      <p>Uygulamada hiçbir analitik, reklam veya izleme SDK'sı (ör. Firebase, Google Analytics, Mixpanel, reklam ağları) bulunmaz. Reklam kimliğiniz (IDFA) veya davranışsal profiliniz oluşturulmaz, cihazlar arası veya uygulamalar arası takip yapılmaz. Bu, iOS Gizlilik Bildirimi'nde (<code>PrivacyInfo.xcprivacy</code>) <code>NSPrivacyTracking: false</code> olarak ve boş bir toplanan-veri listesiyle beyan edilmiştir.</p>
+      <p>Uygulamada hiçbir analitik, reklam veya izleme SDK'sı (ör. Firebase, Google Analytics, Mixpanel, reklam ağları) bulunmaz. Reklam kimliğiniz (IDFA) veya davranışsal profiliniz oluşturulmaz, cihazlar arası veya uygulamalar arası takip yapılmaz. Bu, iOS Gizlilik Bildirimi'nde (<code>PrivacyInfo.xcprivacy</code>) <code>NSPrivacyTracking: false</code> olarak beyan edilmiştir.</p>
 
       <h2><span class="num">4.</span>Cihazınızda Yerel Olarak Sakladığımız Veriler</h2>
-      <p>Aşağıdaki veriler <strong>yalnızca kendi cihazınızda</strong>, Capacitor'ın yerel depolama katmanı (<code>@capacitor/preferences</code> — iOS/Android'de işletim sisteminin güvenli tercih deposu) üzerinden saklanır:</p>
+      <p>Aşağıdaki veriler <strong>kendi cihazınızda</strong>, Capacitor'ın yerel depolama katmanı (<code>@capacitor/preferences</code> — iOS'ta uygulamanın korumalı alanındaki tercih deposu) üzerinden saklanır:</p>
       <ul>
         <li>Garaj profilleriniz (araç marka/model/yıl, kilometre gibi sizin girdiğiniz bilgiler)</li>
         <li>Bakım ve servis geçmişi kayıtlarınız, masraf notlarınız</li>
-        <li>Uygulama tercihleri (ör. açık/koyu tema) ve günlük Usta sohbeti kullanım sayacı</li>
+        <li>Uygulama tercihleri (ör. açık/koyu tema, dil) ve günlük Usta sohbeti kullanım sayacı</li>
+        <li>Usta sohbet geçmişiniz: yazdığınız mesajlar, Usta'nın yanıtları ve eklediğiniz son 4'e kadar fotoğraf — sohbete kaldığınız yerden devam edebilmeniz için saklanır ve uygulama kapansa da kalır</li>
+        <li>Kötüye kullanımı önlemek için kısa bir kullanım geçmişi (tarih ve mesaj sayısı), yapay zekâ veri paylaşımı onayınız, abonelik durumu önbelleği ve destek için rastgele üretilmiş anonim bir destek kimliği (hiçbir yere gönderilmez)</li>
       </ul>
       <div class="callout">
-        Bu veriler herhangi bir sunucuya gönderilmez, bulutla senkronize edilmez, yedeklenmez ve bizimle ya da üçüncü bir tarafla paylaşılmaz. Hiçbir hesap sistemi olmadığı için bu verilere geliştirici olarak bizim de erişimimiz yoktur — veriler yalnızca sizin cihazınızda yaşar.
+        Bu veriler cihazınızda kalır: bulutla senkronize edilmez ve sunucularımıza yedeklenmez; iCloud veya bilgisayar yedeğiniz açıksa iOS bunları sizin kendi yedeğinize dahil edebilir (biz o yedeklere erişemeyiz). Tek istisna: Garaj'a bir araç eklediyseniz, o aracın marka/model/yıl/yakıt/kilometre bilgisi ile son 3 bakım kaydı, her Usta mesajınızla birlikte §5'te anlatıldığı şekilde iletilir (plaka, takma ad, not ve masraf bilgisi gönderilmez). Hiçbir hesap sistemi olmadığı için bu verilere geliştirici olarak bizim de erişimimiz yoktur.
       </div>
 
       <h2><span class="num">5.</span>Yapay Zekâ “Usta” Sohbeti Nasıl Çalışır</h2>
       <p>Usta, uygulamanın <strong>tek çevrimiçi özelliğidir</strong>. Sohbete bir mesaj yazıp gönderdiğinizde:</p>
       <ul>
-        <li>Yalnızca yazdığınız metin ve/veya sohbete eklemeyi seçtiğiniz isteğe bağlı fotoğraf (ör. gösterge paneli ya da bir sızıntı görüntüsü), yanıt üretmek amacıyla, uygulamanın kendi arka uç <em>proxy</em> sunucusu üzerinden <strong>üçüncü taraf bir yapay zekâ hizmet sağlayıcısına</strong> iletilir. Mesajınızda tanıdığımız bir arıza kodu geçiyorsa ya da bilinen bir uyarı lambasıyla eşleşiyorsa, bu konuda kısa bir bilgi notu da aynı şekilde eklenir. Garaj'a bir araç eklediyseniz, o aracın kayıtlı profili (marka, model, yıl, yakıt tipi, kilometre) ve son 3 bakım kaydı, o sohbette gönderdiğiniz HER mesaja — o belirli mesajda bahsetmeseniz bile — otomatik olarak eklenir. Uygulama, göndermeden önce bu paylaşım için açık onayınızı ister (bkz. sohbet ekranındaki izin diyaloğu). Gerçek yapay zekâ sağlayıcı anahtarları hiçbir zaman uygulama içinde bulunmaz; yalnızca bu proxy'de saklanır.</li>
-        <li>Fotoğraf eklemek tamamen isteğe bağlıdır: kamera veya galeri erişimi yalnızca siz sohbette "Fotoğraf ekle" düğmesine bastığınız anda, yalnızca o fotoğrafı seçmeniz/çekmeniz için istenir — arka planda ya da başka hiçbir ekranda kameranıza veya galerinize erişilmez. Fotoğraf, gönderilmeden önce cihazınızda küçültülür.</li>
+        <li>Yazdığınız metin, o sohbetteki önceki mesajların son bölümü (Usta'nın yanıtları dahil), sohbete eklemeyi seçtiğiniz isteğe bağlı fotoğraf (ör. gösterge paneli ya da bir sızıntı görüntüsü) ve arayüz diliniz, yanıt üretmek amacıyla, uygulamanın kendi arka uç <em>proxy</em> sunucusu üzerinden <strong>üçüncü taraf bir yapay zekâ hizmet sağlayıcısına</strong> iletilir. Mesajınızda tanıdığımız bir arıza kodu geçiyorsa ya da bilinen bir uyarı lambasıyla eşleşiyorsa, bu konuda kısa bir bilgi notu da aynı şekilde eklenir. Garaj'a bir araç eklediyseniz, o aracın kayıtlı profili (marka, model, yıl, yakıt tipi, kilometre) ve son 3 bakım kaydı, o sohbette gönderdiğiniz HER mesaja — o belirli mesajda bahsetmeseniz bile — otomatik olarak eklenir. Uygulama, göndermeden önce bu paylaşım için açık onayınızı ister (bkz. sohbet ekranındaki izin diyaloğu). Gerçek yapay zekâ sağlayıcı anahtarları hiçbir zaman uygulama içinde bulunmaz; yalnızca bu proxy'de saklanır.</li>
+        <li>Fotoğraf eklemek tamamen isteğe bağlıdır: kamera veya galeri erişimi yalnızca siz bir fotoğraf/kamera düğmesine bastığınız anda, yalnızca o fotoğrafı seçmeniz/çekmeniz için istenir — arka planda ya da başka hiçbir ekranda kameranıza veya galerinize erişilmez. Fotoğraf, gönderilmeden önce cihazınızda küçültülür.</li>
         <li>Uygulamada hesap olmadığından mesajınıza veya fotoğrafınıza adınız, e-postanız ya da kalıcı bir cihaz/kullanıcı kimliği eklenmez — kimliğinizle ilişkilendirilmez. (İnternet üzerinden yapılan her istekte olduğu gibi, isteği işleyen sunucu IP adresiniz gibi standart bağlantı bilgilerini teknik olarak görebilir; bu, uygulamanın ayrıca topladığı veya sakladığı bir veri değildir.)</li>
-        <li>Mesajınız ve varsa fotoğrafınız yalnızca o anki yanıtı üretmek için <strong>geçici olarak</strong> işlenir; sunucu tarafında kalıcı olarak kaydedilmez, diske yazılmaz veya günlüklenmez ve yapay zekâ modellerini eğitmek için kullanılmaz.</li>
-        <li>Sohbet ekranındaki mesaj/fotoğraf geçmişi, yalnızca o oturumda görüntülemek için uygulamanın geçici çalışma belleğinde tutulur; cihazınızda kalıcı olarak saklanmaz ve uygulamadan çıkıldığında kaybolur.</li>
+        <li>Mesajınız ve varsa fotoğrafınız yalnızca o anki yanıtı üretmek için işlenir; kendi arka uç sunucumuzda kaydedilmez, diske yazılmaz ve içerik olarak günlüklenmez. IP adresiniz hız sınırı için geçici olarak kullanılır ve barındırma altyapısının standart günlüklerinde görünebilir. Yapay zekâ hizmet sağlayıcısı içeriği kendi şartları ve gizlilik politikası uyarınca işler ve kısa bir süre saklayabilir.</li>
+        <li>Sohbet ekranındaki mesaj/fotoğraf geçmişi (son 4 fotoğrafa kadar), sohbete kaldığınız yerden devam edebilmeniz için yalnızca cihazınızda saklanır ve uygulama kapansa da kalır. Sohbet ekranındaki “Yeni sohbet” düğmesiyle veya Ayarlar → “Verileri sıfırla” ile silebilirsiniz.</li>
         <li>İnternet bağlantınız yoksa veya bu özellik yapılandırılmamışsa uygulama herhangi bir mesaj ya da fotoğraf göndermez; bunun yerine sizi çevrimdışı araçlara (kod sözlüğü, teşhis sihirbazı, uyarı ışıkları rehberi) yönlendiren güvenli bir mesaj gösterir.</li>
       </ul>
       <p class="muted">Usta'nın verdiği yanıtlar bilgilendirme amaçlıdır; yetkili bir servis muayenesinin yerini tutmaz.</p>
@@ -208,15 +210,15 @@
       <p>Otomo; konumunuzu, rehber/kişilerinizi, sağlık verilerinizi ya da ödeme/finansal bilgilerinizi <strong>talep etmez ve toplamaz</strong>. Kamera ve fotoğraf galerisi erişimi yalnızca yukarıda (§5) açıklanan isteğe bağlı "Usta'ya fotoğraf ekle" özelliği için, yalnızca siz kullanmayı seçtiğinizde istenir; başka hiçbir ekranda veya amaçla kullanılmaz, arka planda çalışmaz.</p>
 
       <h2><span class="num">7.</span>Üçüncü Taraflarla Paylaşım</h2>
-      <p>Verilerinizi satmayız ve reklam ağları veya veri komisyoncularıyla paylaşmayız. Tek istisna, §5'te açıklanan şekilde, yalnızca bir yanıt üretebilmesi için sohbet mesajınızın yapay zekâ işleme hizmetine iletilmesidir.</p>
+      <p>Verilerinizi satmayız ve reklam ağları veya veri komisyoncularıyla paylaşmayız. Paylaşım yalnızca iki durumda olur: (1) §5'te açıklanan şekilde, bir yanıt üretilebilmesi için sohbet içeriğinizin yapay zekâ hizmet sağlayıcısına iletilmesi; (2) Pro abonelik doğrulaması için, üçüncü taraf bir abonelik yönetim hizmetinin anonim bir kimlik, satın alma/makbuz bilgisi ve IP adresinizi işlemesi (kart ve ödeme bilgileriniz yalnızca Apple'da kalır).</p>
 
       <h2><span class="num">8.</span>Veri Güvenliği</h2>
-      <p>Cihazınızdaki yerel veriler, işletim sisteminizin (iOS/Android) sağladığı standart güvenli depolama mekanizmalarıyla korunur. Usta sohbeti için yapılan ağ istekleri HTTPS ile şifrelenir.</p>
+      <p>Cihazınızdaki yerel veriler, iOS'un uygulamalara ayırdığı korumalı alanda (sandbox) tutulur. Uygulamanın yaptığı ağ istekleri (Usta sohbeti ve abonelik doğrulaması) HTTPS ile şifrelenir.</p>
 
       <h2><span class="num">9.</span>Verilerinizi Nasıl Silersiniz</h2>
       <p>İki yolunuz var:</p>
       <ul>
-        <li><strong>Uygulama içinden:</strong> Ayarlar → <strong>“Verileri sıfırla”</strong> — tüm araçlarınız, bakım geçmişiniz ve tercihleriniz cihazınızdan kalıcı ve geri alınamaz şekilde silinir.</li>
+        <li><strong>Uygulama içinden:</strong> Ayarlar → <strong>“Verileri sıfırla”</strong> — araçlarınız, bakım kayıtlarınız ve sohbet geçmişiniz cihazınızdan kalıcı ve geri alınamaz şekilde silinir. Kötüye kullanımı önlemek için günlük kullanım sayaçları/kısa kullanım geçmişi, abonelik durumu önbelleği, yapay zekâ onayınız, dil/tema tercihleri ve anonim destek kimliği bu işlemle silinmez; uygulamayı kaldırdığınızda silinir.</li>
         <li><strong>Uygulamayı kaldırarak:</strong> Otomo'yu cihazınızdan kaldırmak (uninstall), depoladığı tüm yerel verileri de birlikte siler.</li>
       </ul>
 
@@ -233,8 +235,8 @@
       <p class="muted">Bu bölüm, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca Türkiye'deki kullanıcılarımız için ek aydınlatma amacıyla hazırlanmıştır.</p>
       <ul>
         <li><strong>Veri sorumlusu:</strong> Otomo uygulamasının geliştiricisi. İletişim: <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a>.</li>
-        <li><strong>İşlenen veri kategorileri:</strong> (a) Cihazınızda kalan uygulama verisi — araç/garaj profilleri, bakım geçmişi, tercihler (§4) — bize hiç ulaşmaz, yalnızca cihazınızda tutulur; (b) Usta sohbetine yazdığınız metin ve isteğe bağlı olarak eklediğiniz fotoğraf (§5) — kimliğinizle ilişkilendirilmeden, yalnızca o anki yanıtı üretmek amacıyla geçici olarak işlenir.</li>
-        <li><strong>Yurt dışına aktarım:</strong> Usta sohbetiniz (metin ve varsa fotoğraf), yanıt üretmesi için <strong>yurt dışında yerleşik, üçüncü taraf bir yapay zekâ hizmet sağlayıcısına</strong> iletilir; bu veri kategorisi yalnızca bu amaçla ve yalnızca o anlık işlem sırasında yurt dışına aktarılmış olur. Cihazınızda kalan diğer veriler (§4) hiçbir şekilde yurt dışına ya da başka bir yere aktarılmaz.</li>
+        <li><strong>İşlenen veri kategorileri:</strong> (a) Cihazınızda kalan uygulama verisi — araç/garaj profilleri, bakım geçmişi, sohbet geçmişi, tercihler (§4) — yalnızca cihazınızda tutulur (yalnızca Garaj'a eklediğiniz aracın temel bilgileri ile son bakım kayıtları Usta mesajlarıyla birlikte iletilir, bkz. (b)); (b) Usta sohbetine yazdığınız metin, sohbetin önceki mesajlarının son bölümü, isteğe bağlı olarak eklediğiniz fotoğraf ve varsa aracınızın temel bilgileri/son bakım kayıtları (§5) — kimliğinizle ilişkilendirilmeden, yalnızca o anki yanıtı üretmek amacıyla geçici olarak işlenir.</li>
+        <li><strong>Yurt dışına aktarım:</strong> Usta sohbetiniz (metin ve varsa fotoğraf), yanıt üretmesi için <strong>yurt dışında yerleşik, üçüncü taraf bir yapay zekâ hizmet sağlayıcısına</strong> iletilir; bu veri kategorisi yalnızca bu amaçla ve yalnızca o anlık işlem sırasında yurt dışına aktarılmış olur. Cihazınızda kalan diğer veriler (§4) yurt dışına ya da başka bir yere aktarılmaz. Ayrıca Pro abonelik doğrulaması için anonim bir kimlik, satın alma/makbuz bilgisi ve IP adresiniz, yurt dışında bulunan üçüncü taraf bir abonelik yönetim hizmetince işlenir.</li>
         <li><strong>KVKK madde 11 hakları:</strong> KVKK m.11 uyarınca kişisel verinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını öğrenme, yurt içinde/dışında aktarıldığı üçüncü kişileri bilme, eksik/yanlış işlenmişse düzeltilmesini isteme, mevzuatın öngördüğü şartlarda silinmesini/yok edilmesini isteme ve otomatik sistemlerle analiz sonucu aleyhinize bir sonuç çıkmasına itiraz etme haklarına sahipsiniz.</li>
         <li><strong>Başvuru yolu:</strong> Bu haklarınızı kullanmak için <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a> adresine yazılı olarak başvurabilirsiniz; talebiniz makul bir süre içinde yanıtlanır. Ayrıca cihazınızdaki veriler için Ayarlar → "Verileri sıfırla" (§9) ile herhangi bir başvuruya gerek kalmadan anında ve doğrudan kontrol sizdedir.</li>
       </ul>
@@ -248,33 +250,35 @@
       <p class="muted">This document explains, in plain language, how the Otomo mobile app (“Otomo”, “the app”, “we”) handles your data. By using the app, you agree to this policy.</p>
 
       <h2><span class="num">1.</span>Introduction</h2>
-      <p>Otomo is a car-diagnostics assistant offering a dashboard warning-light guide, an OBD-II trouble-code lookup, a symptom-based troubleshooting wizard, a maintenance/garage log, and an optional AI “Mechanic” chat. Nearly the entire app works fully offline; the AI chat is the app's only online feature (see §6).</p>
+      <p>Otomo is a car-diagnostics assistant offering a dashboard warning-light guide, an OBD-II trouble-code lookup, a symptom-based troubleshooting wizard, a maintenance/garage log, and an optional AI “Mechanic” chat. Nearly the entire app works fully offline; the only online features are the AI chat and Pro subscription verification (see §5 and §7).</p>
 
       <h2><span class="num">2.</span>No Account or Sign-In</h2>
       <p>Otomo does not require — and does not offer — registration, sign-in, or profile creation. We do not ask for or collect identifying information such as your name, email address, phone number, or a password.</p>
 
       <h2><span class="num">3.</span>No Analytics, Advertising, or Tracking</h2>
-      <p>The app contains no analytics, advertising, or tracking SDKs (e.g. Firebase, Google Analytics, Mixpanel, ad networks). We do not build an advertising identifier (IDFA) or behavioral profile, and we do not track you across apps or devices. This is declared in the iOS Privacy Manifest (<code>PrivacyInfo.xcprivacy</code>) as <code>NSPrivacyTracking: false</code> with an empty collected-data-types list.</p>
+      <p>The app contains no analytics, advertising, or tracking SDKs (e.g. Firebase, Google Analytics, Mixpanel, ad networks). We do not build an advertising identifier (IDFA) or behavioral profile, and we do not track you across apps or devices. This is declared in the iOS Privacy Manifest (<code>PrivacyInfo.xcprivacy</code>) as <code>NSPrivacyTracking: false</code>.</p>
 
       <h2><span class="num">4.</span>Data Stored Locally On Your Device</h2>
-      <p>The following data is stored <strong>only on your own device</strong>, via Capacitor's local storage layer (<code>@capacitor/preferences</code> — the operating system's secure preferences store on iOS/Android):</p>
+      <p>The following data is stored <strong>on your own device</strong>, via Capacitor's local storage layer (<code>@capacitor/preferences</code> — the preferences store inside the app's iOS sandbox):</p>
       <ul>
         <li>Your garage profiles (vehicle make/model/year, mileage, and similar details you enter)</li>
         <li>Your maintenance and service history entries, cost notes</li>
-        <li>App preferences (e.g. light/dark theme) and the daily Mechanic-chat usage counter</li>
+        <li>App preferences (e.g. light/dark theme, language) and the daily Mechanic-chat usage counter</li>
+        <li>Your Mechanic chat history: the messages you wrote, the Mechanic's replies and up to your latest 4 attached photos — kept so you can resume where you left off, and it remains after the app closes</li>
+        <li>A short usage log (date and message count) to prevent abuse, your AI data-sharing consent, a subscription-status cache, and a random anonymous support ID for support requests (never sent anywhere)</li>
       </ul>
       <div class="callout">
-        This data is never sent to a server, synced to a cloud, backed up remotely, or shared with us or any third party. Because there is no account system, we as the developer have no access to this data either — it lives solely on your device.
+        This data stays on your device: it is not synced to a cloud or backed up to our servers; if iCloud or computer backup is on, iOS may include it in your own backup, which we cannot access. The only exception: if you added a vehicle in Garage, its make/model/year/fuel/mileage and your last 3 maintenance entries accompany each Mechanic message as described in §5 (plate, nickname, notes and costs are never sent). Because there is no account system, we as the developer have no access to this data either.
       </div>
 
       <h2><span class="num">5.</span>How the AI “Mechanic” Chat Works</h2>
       <p>Mechanic is the app's <strong>only online feature</strong>. When you type and send a chat message:</p>
       <ul>
-        <li>Only the text you wrote and/or the optional photo you choose to attach (e.g. a dashboard photo or a leak) is sent, solely to generate a reply, through the app's own backend proxy to a <strong>third-party AI service provider</strong>. If your message contains a fault code we recognize or matches a known warning light, a short factual note about it is included the same way. If you've added a vehicle in Garage, that vehicle's saved profile (make, model, year, fuel type, mileage) and your last 3 maintenance entries are automatically included with every message you send in that chat — whether or not that particular message mentions them. The app asks for your explicit permission before any of this is sent for the first time (see the consent dialog on the chat screen). Real AI-provider API keys never live in the app itself; they are kept only on that proxy.</li>
-        <li>Attaching a photo is entirely optional: camera or photo-library access is requested only at the moment you tap "Attach photo" in the chat, only so you can pick or take that one photo — your camera or gallery is never accessed in the background or anywhere else. The photo is downsized on your device before it is sent.</li>
+        <li>Your message text, the most recent earlier messages in that chat (including the Mechanic's replies), the optional photo you choose to attach (e.g. a dashboard photo or a leak) and your interface language are sent, solely to generate a reply, through the app's own backend proxy to a <strong>third-party AI service provider</strong>. If your message contains a fault code we recognize or matches a known warning light, a short factual note about it is included the same way. If you've added a vehicle in Garage, that vehicle's saved profile (make, model, year, fuel type, mileage) and your last 3 maintenance entries are automatically included with every message you send in that chat — whether or not that particular message mentions them. The app asks for your explicit permission before any of this is sent for the first time (see the consent dialog on the chat screen). Real AI-provider API keys never live in the app itself; they are kept only on that proxy.</li>
+        <li>Attaching a photo is entirely optional: camera or photo-library access is requested only at the moment you tap a photo/camera button, only so you can pick or take that one photo — your camera or gallery is never accessed in the background or anywhere else. The photo is downsized on your device before it is sent.</li>
         <li>Since the app has no account, your message or photo is not tagged with your name, email, or a persistent device/user identifier — it is not linked to your identity. (As with any request made over the internet, the server processing it can technically see standard connection details such as your IP address; this is not data the app itself additionally collects or stores.)</li>
-        <li>Your message and any photo are processed only <strong>transiently</strong>, to produce that one reply; we do not permanently store them, write them to disk, or log them on our side, and they are not used to train AI models.</li>
-        <li>The message/photo history shown on the chat screen is kept only in the app's temporary in-memory session state for display purposes; it is not persisted on your device and disappears when you leave the app.</li>
+        <li>Your message and any photo are processed only to produce that reply; our own backend does not store them, write them to disk, or log their content. Your IP address is used transiently for rate limiting and may appear in the hosting infrastructure's standard logs. The AI service provider processes the content under its own terms and privacy policy and may retain it briefly.</li>
+        <li>The message/photo history shown on the chat screen (up to your latest 4 photos) is saved only on your device so you can resume where you left off, and it remains after the app closes. You can delete it with the “New chat” button on the chat screen or Settings → “Reset data”.</li>
         <li>If you have no internet connection, or this feature isn't configured, the app sends nothing — instead it shows a safe message pointing you to the offline tools (code lookup, troubleshooting wizard, warning-light guide).</li>
       </ul>
       <p class="muted">Mechanic's answers are informational; they do not replace an inspection by a qualified mechanic.</p>
@@ -283,15 +287,15 @@
       <p>Otomo does <strong>not</strong> request or collect your location, contacts, health data, or payment/financial information. Camera and photo-library access is requested only for the optional "attach a photo to Mechanic" feature described above (§5), only when you choose to use it; it is not used anywhere else and never runs in the background.</p>
 
       <h2><span class="num">7.</span>Third-Party Sharing</h2>
-      <p>We do not sell your data and do not share it with ad networks or data brokers. The sole exception is described in §5: your chat message is relayed to an AI processing service solely so it can generate a reply.</p>
+      <p>We do not sell your data and do not share it with ad networks or data brokers. Sharing happens only in two cases: (1) as described in §5, your chat content is relayed to an AI service provider solely so it can generate a reply; (2) for Pro subscription verification, a third-party subscription-management service processes an anonymous ID, purchase/receipt data and your IP address (your card and payment details stay with Apple).</p>
 
       <h2><span class="num">8.</span>Data Security</h2>
-      <p>Local data on your device is protected by your operating system's (iOS/Android) standard secure storage mechanisms. Network requests made for the Mechanic chat are encrypted over HTTPS.</p>
+      <p>Local data on your device is kept inside the app sandbox that iOS reserves for each app. Network requests made by the app (Mechanic chat and subscription verification) are encrypted over HTTPS.</p>
 
       <h2><span class="num">9.</span>Deleting Your Data</h2>
       <p>You have two options:</p>
       <ul>
-        <li><strong>In the app:</strong> Settings → <strong>“Verileri sıfırla” (Reset Data)</strong> — permanently and irreversibly deletes all your vehicles, maintenance history, and preferences from your device.</li>
+        <li><strong>In the app:</strong> Settings → <strong>“Verileri sıfırla” (Reset Data)</strong> — permanently and irreversibly deletes your vehicles, maintenance records and chat history from your device. To prevent abuse, daily usage counters/short usage log, the subscription-status cache, your AI consent, language/theme preferences and the anonymous support ID are not removed by this action; they are deleted when you uninstall the app.</li>
         <li><strong>By uninstalling:</strong> Removing Otomo from your device deletes all the local data it stored along with it.</li>
       </ul>
 
@@ -310,7 +314,7 @@
   </main>
 
   <footer class="page-foot">
-    <p>Otomo · <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a> · Yürürlük / Effective: 16 Eylül 2026 / September 16, 2026</p>
+    <p>Otomo · <a href="mailto:sellercomp@hotmail.com">sellercomp@hotmail.com</a> · Yürürlük / Effective: 19 Eylül 2026 / September 19, 2026</p>
   </footer>
 
 </div>
